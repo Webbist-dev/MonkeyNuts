@@ -1,0 +1,16 @@
+// Convert a px value into a rem value.
+// Supply the rem value to the primary style sheet and the px fallback to the ltie9 style sheet.
+
+@function rem($pxval) {
+    
+    $val: strip-unit($pxval);
+    $base: strip-unit($browser-default-font-size);
+    
+    @if ($ltie9 == true) {
+        @return $val * 1px;
+    }
+    
+    @else {
+        @return ($val / $base) * 1rem;
+    }
+}

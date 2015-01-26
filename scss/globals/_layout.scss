@@ -1,0 +1,14 @@
+* {
+	@include box-sizing(border-box);
+}
+
+.container {
+	@include container;
+	overflow: hidden;
+
+	
+	@if $ltie9 == true {
+		padding:0 $v-spacing-half;
+	}
+}
+

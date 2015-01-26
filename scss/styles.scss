@@ -1,0 +1,6 @@
+// Our primary style sheet, minus code for <IE9.
+
+$ltie9: false; // Don't compile <IE9 code.
+$print-styles: false; // Don't compile our print styles.
+
+@import 'all'; // Import our partials.

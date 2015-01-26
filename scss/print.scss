@@ -1,0 +1,7 @@
+// Our print style sheet
+
+$ltie9: true; // Compile our <IE9 code.
+$print-styles: true; // Compile our print styles.
+$breakpoint-no-queries: true; // Don't compile our media queries.
+
+@import 'all'; // Import our partials.

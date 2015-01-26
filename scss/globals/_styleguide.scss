@@ -1,0 +1,260 @@
+* {
+    margin-top: 0;
+}
+html {
+    overflow: scroll!important;
+}
+body {
+    font-size: rem($base-font-size);
+    line-height: 1.5;
+    font-family: $base-font-family;
+    font-weight: 100;
+    color: $body_copy;
+}
+
+p, blockquote, table, hr, pre {
+    margin-bottom: rem($v-spacing);
+}
+
+// Headings
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    margin: 0 0 rem($v-spacing);
+    font-weight: 100;
+}
+
+h1, .h1 {
+    font-size: rem(30px);
+}
+
+h2, .h2 {
+    font-size: rem(26px);
+}
+
+h3, .h3 {
+    font-size: rem(22px);
+}
+
+h4, .h4 {
+    font-size: rem(18px);
+}
+
+h5, .h5 {
+    font-size: rem(14px);
+}
+
+h6, .h6 {
+    font-size: rem($base-font-size);
+}
+
+// Lists
+ul, ol {
+    padding-left: rem($v-spacing-three-quarter);
+    margin-bottom: rem($v-spacing-three-quarter);
+    
+    & & {
+        margin-top: rem($v-spacing-quarter);
+        margin-bottom: 0;
+    }
+}
+
+    li {
+        margin-bottom: rem($v-spacing-quarter);
+    }
+
+// Links
+a {
+    
+    &:link, &:visited {
+        color: #000;
+        text-decoration: none;
+    }
+    
+    &:hover, &:focus {
+        text-decoration: underline;
+    }
+    
+    &:active {
+        text-decoration: underline;
+        color: #000;
+    }
+}
+
+// Tables
+table {
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+
+    th {
+        font-weight: 300;
+        background: #000;
+        padding: rem($v-spacing-half);
+    }
+    
+    td {
+        padding: rem($v-spacing-half);
+        border: 1px solid #000;
+    }
+
+// Forms
+
+input,
+textarea,
+select,
+button, input[type="submit"],
+.button, %button {
+    margin-bottom: rem($v-spacing-three-quarter);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+    font-family: $base-font-family;
+    font-size: rem($base-font-size);
+    @include border-radius(rem(3px));
+    max-width: 100%;
+    width: 100%;
+    color: $body_copy;
+    border: 1px solid $body_copy;
+    @include transition(.3s);
+    
+    &:focus {
+       
+    }
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    line-height: 1.6;
+    padding: rem($v-spacing-quarter);
+}
+
+textarea:focus, input:focus{
+     outline-color: none;
+}
+
+textarea {
+    padding: rem($v-spacing-quarter);
+}
+
+label {
+    display: block;
+    margin-bottom: rem(3px);
+    
+    input + & {
+        display: inline-block;
+        margin-bottom: 0;
+        margin-left: rem($v-spacing-quarter);
+    }
+    
+    :checked + & {
+        font-weight: 300;
+        font-style: italic;
+    }
+    
+}
+
+.input-box + label {
+    margin-bottom: rem($v-spacing-half);
+    vertical-align: top;
+}
+
+button, input[type="submit"],
+.button, %button {
+    background: red;
+    @include border-radius(rem(5px));
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 300;
+    line-height: 1.39;
+    text-align: center;
+    padding: rem($v-spacing-quarter) rem($v-spacing-three-quarter);
+    border: 0;
+    @include transition(.3s);
+    
+    &:link, &:visited {
+        color: #fff;
+    }
+    
+    &:hover, &:focus {
+
+    }
+    
+    &:active {
+
+    }
+}
+
+img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+// Other
+blockquote {
+    margin: 0 rem($v-spacing);
+    font-style: italic;
+    font-weight: 300;
+}
+
+
+.style--seperator, hr {
+    margin-bottom:rem($v-spacing);
+    border-bottom:1px dashed #000;
+    border-top:none;
+}
+.cms-page-view, 
+.is-blog {
+    .page-title h1 {
+        margin-bottom:rem($v-spacing);
+        padding-bottom:rem($v-spacing);
+        border-bottom:1px dashed #000;
+    }
+}
+
+.spacer-bottom {
+    margin-bottom:rem($v-spacing);
+}
+
+.no-display {
+    display: none;
+}
+
+.inline-block {
+    display: inline-block;
+}
+// box style
+.box {
+    padding:rem(15px);
+    background:#000;
+    overflow: hidden;
+}
+
+.box-secondary {
+    padding:rem(20px);
+    background:#000;
+    overflow: hidden;
+    font-size: rem($base-font-size);
+    margin-bottom:rem($v-spacing);
+}
+
+.full-width {
+    width: 100%;
+}
+
+.sprite--primary,
+%sprite--primary {
+    //background-image: sprite-url($sprite);
+}
+
+
+
